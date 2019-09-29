@@ -1,0 +1,45 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Custom dimens -->
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="horizontal_margin">20dp</dimen>
+    <dimen name="horizontal_description_margin">22dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+
+    <dimen name="activity_padding">16dp</dimen>
+    <dimen name="placeholder_image">50dp</dimen>
+    <dimen name="placeholder_text_height">8dp</dimen>
+    <dimen name="activity_padding_horizontal">16dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+
+    <!-- MSVSearch -->
+    <dimen name="msv_horizontal_margin">8dip</dimen>
+
+    <dimen name="msv_icon_padding">12dp</dimen>
+    <dimen name="msv_text_padding">65dp</dimen>
+
+    <dimen name="msv_suggestions_left_margin">48dp</dimen>
+
+    <dimen name="msv_filter_height">32dip</dimen>
+    <dimen name="msv_filter_margin">2dip</dimen>
+    <dimen name="msv_filter_rv_padding">2dip</dimen>
+    <dimen name="msv_filter_rv_height">40dip</dimen>
+    <dimen name="msv_filter_close_button_horizontal_margin">4dip</dimen>
+
+    <dimen name="msv_select_filter_left_margin">16dp</dimen>
+    <dimen name="msv_select_filter_icon_padding">12dip</dimen>
+    <dimen name="msv_select_filter_text_left_margin">72dip</dimen>
+    <dimen name="msv_select_filter_icon_size">36dip</dimen>
+    <dimen name="msv_select_filter_section_height">48dip</dimen>
+    <dimen name="msv_select_filter_my_filter_height">48dip</dimen>
+
+    <dimen name="image_width">120dp</dimen>
+    <dimen name="image_final_width">32dp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+</resources>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activities.info.AppInfoActivity"
+    tools:showIn="@layout/layout_app_info">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/relativeLayout2">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/id_card"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_margin="4dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/app_googleplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="30dp"
+                    android:maxHeight="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/horizontal_margin"
+                    android:src="@drawable/ic_googleplay"
+                    android:contentDescription="@null"/>
+                <TextView
+                    android:id="@+id/app_apk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:layout_margin="4dp"
+                    android:textColor="@color/text_primary"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/horizontal_margin"
+                    android:layout_marginRight="@dimen/horizontal_margin"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/start_card"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/id_card">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_primary"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:text="@string/dialog_run"
+                android:textSize="25sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/text_secondary"
+                android:layout_marginLeft="@dimen/horizontal_description_margin"
+                android:layout_marginRight="@dimen/horizontal_description_margin"
+                android:layout_marginTop="50dp"
+                android:text="@string/dialog_run_description"
+                android:textSize="14sp"
+                android:ellipsize="end"
+                android:singleLine="true" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_below="@id/start_card"
+            android:id="@+id/extract_card"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_margin="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_primary"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:text="@string/dialog_extract"
+                android:textSize="25sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/text_secondary"
+                android:layout_marginLeft="@dimen/horizontal_description_margin"
+                android:layout_marginRight="@dimen/horizontal_description_margin"
+                android:layout_marginTop="50dp"
+                android:text="@string/dialog_extract_description"
+                android:textSize="14sp"
+                android:ellipsize="end"
+                android:singleLine="true" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_below="@id/extract_card"
+            android:id="@+id/uninstall_card"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_margin="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_primary"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:text="@string/dialog_uninstall"
+                android:textSize="25sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/text_secondary"
+                android:layout_marginLeft="@dimen/horizontal_description_margin"
+                android:layout_marginRight="@dimen/horizontal_description_margin"
+                android:layout_marginTop="50dp"
+                android:text="@string/dialog_uninstall_description"
+                android:textSize="14sp"
+                android:ellipsize="end"
+                android:singleLine="true" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

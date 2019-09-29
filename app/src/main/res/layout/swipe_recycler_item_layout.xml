@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/swipe_selection_layout"
+    app:leftEdgeSwipeOffset="0dp"
+    app:rightEdgeSwipeOffset="0dp">
+
+    <!-- Swipe layout -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="4dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:id="@+id/txt_swipe_extract"
+            android:padding="8dp"
+            android:background="@color/gplus_color_1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_swipe_layout_extract_file"
+                android:layout_gravity="center"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/md_white_1000"
+                android:text="@string/button_extract" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:id="@+id/txt_swipe_share"
+            android:padding="8dp"
+            android:background="@color/gplus_color_2">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_swipe_layout_share"
+                android:layout_gravity="center"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:id="@+id/swipe_txt_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/md_white_1000"
+                android:text="@string/button_share" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:id="@+id/txt_swipe_fav"
+            android:background="@color/gplus_color_3"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/swipe_fav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_swipe_layout_fav"
+                android:layout_gravity="center"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/action_favorites" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:id="@+id/txt_swipe_info"
+            android:padding="8dp"
+            android:background="@color/gplus_color_4">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_swipe_layout_info"
+                android:layout_gravity="center"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/md_white_1000"
+                android:text="@string/action_about" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignBottom="@+id/txtApk"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@null"
+            android:maxHeight="48dp"
+            android:maxWidth="48dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_android"
+            android:transitionName="@string/transition_app_icon"/>
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/imgIcon"
+            android:layout_marginStart="70dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/primary_text"
+            android:text="@string/app_name"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtApk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/txtName"
+            android:layout_marginTop="40dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:gravity="center_vertical"
+            android:text="Package"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"/>
+
+        <TextView
+            android:id="@+id/txtApkSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_alignParentEnd="true"
+            android:textSize="14sp"
+            android:textColor="@color/colorAccent"/>
+
+    </RelativeLayout>
+
+</com.daimajia.swipe.SwipeLayout>
