@@ -7,12 +7,14 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.provider.MediaStore;
+import android.text.format.Formatter;
 
 import com.appman.appmanager.constants.AppConstants;
 import com.appman.appmanager.data.MusicInfo;
 import com.appman.appmanager.interfaces.IMusicLibraryListener;
 import com.appman.appmanager.util.AppUtil;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,9 +46,10 @@ public class GetAllMusicCommand extends AsyncTask<Void, Void, List<MusicInfo>> {
                     String currentTitle = cursor.getString(songTitle);
                     String currentArtist = cursor.getString(songArtist);
                     String currentLocation = cursor.getString(songLocation);
+                    String musicSize = Formatter.formatFileSize(mContext, new File(currentLocation).length());
 
                     mMusicLibraryList.add(new MusicInfo(currentTitle,
-                            currentArtist, currentLocation));
+                            currentArtist, musicSize, currentLocation));
                 } while (cursor.moveToNext());
             }
             if (cursor != null) {

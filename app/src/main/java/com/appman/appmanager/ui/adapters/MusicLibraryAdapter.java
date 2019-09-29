@@ -35,7 +35,7 @@ public class MusicLibraryAdapter extends RecyclerView.Adapter<MusicLibraryAdapte
     @Override
     public MusicViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View appAdapterView = LayoutInflater.from(context).inflate(R.layout.music_lib_list_item_layout,
-                parent,false);
+                parent, false);
         return new MusicViewHolder(appAdapterView);
     }
 
@@ -44,6 +44,7 @@ public class MusicLibraryAdapter extends RecyclerView.Adapter<MusicLibraryAdapte
         MusicInfo musicInfo = musicInfoList.get(position);
         holder.vName.setText(musicInfo.getTitle());
         holder.vApk.setText(musicInfo.getArtist());
+        holder.vtxtApkSize.setText(musicInfo.getMusicSize());
         holder.vIcon.setImageResource(R.drawable.ic_music_note_black);
 
         setButtonEvents(holder, musicInfo);
@@ -97,6 +98,7 @@ public class MusicLibraryAdapter extends RecyclerView.Adapter<MusicLibraryAdapte
     static class MusicViewHolder extends RecyclerView.ViewHolder {
         private TextView vName;
         private TextView vApk;
+        private TextView vtxtApkSize;
         private ImageView vIcon;
         private CardView vCard;
         // SwipeLayout
@@ -112,6 +114,7 @@ public class MusicLibraryAdapter extends RecyclerView.Adapter<MusicLibraryAdapte
             super(v);
             vName = v.findViewById(R.id.txtName);
             vApk = v.findViewById(R.id.txtApk);
+            vtxtApkSize = v.findViewById(R.id.txtApkSize);
             vIcon = v.findViewById(R.id.imgIcon);
             vCard = v.findViewById(R.id.app_card);
 
